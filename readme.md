@@ -41,7 +41,7 @@ Because fraud is so rare, the challenge is less about building a model and more 
 
 ### Exploratory findings
 
-![Class distribution](images/class_distribution.png)
+![Class distribution](class_distribution.png)
 
 - Amount is heavily skewed. For fraud, the median is **$9.25** but the mean is **$122.21**, so medians and percentiles describe it better than means.
 - A quarter of frauds are $1 or less, but fraud also occurs at large amounts. Amount alone does not separate fraud from legitimate transactions.
@@ -93,7 +93,7 @@ Tuned parameters: `n_estimators=500`, `max_depth=6`, `learning_rate=0.03`, `subs
 
 ### Score distribution
 
-![Model scores by true class](images/score_distribution.png)
+![Model scores by true class](score_distribution.png)
 
 Legitimate transactions score near 0 and most frauds score near 1. Almost no frauds fall between about 0.2 and 0.55.
 
@@ -124,8 +124,8 @@ Legitimate transactions score near 0 and most frauds score near 1. Almost no fra
 
 ### Feature importance and SHAP
 
-![XGBoost feature importance](images/feature_importance.png)
-![SHAP summary plot](images/shap_summary.png)
+![XGBoost feature importance](feature_importance.png)
+![SHAP summary plot](shap_summary.png)
 
 - `V14` is the most influential feature in both views. Low `V14` values push predictions strongly toward fraud.
 - Low `V12`, `V10`, `V17` and high `V4`, `V11` also push toward fraud.
